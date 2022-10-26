@@ -1,0 +1,31 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build  --dest ../docs"
+  },
+  "dependencies": {
+    "dagre": "^0.8.5",
+    "element-plus": "^2.2.19",
+    "v-network-graph": "^0.6.10",
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/dagre": "^0.7.48",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-typescript": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "node-sass": "^7.0.3",
+    "sass-loader": "^13.1.0",
+    "typescript": "~4.5.5"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}
