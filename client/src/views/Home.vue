@@ -9,7 +9,26 @@
             <pre
                 style="margin-left: 15px; font-size: medium;">Right Click&#009;: Open menu to change name and cost.</pre>
         </el-alert>
+        <div style="text-align: end;">
+            <el-button type="text" @click="visible = true">Tutorial</el-button>
+        </div>
     </div>
+    <el-dialog v-model="visible" title="Tutorial" center>
+        <el-carousel style="text-align: center;">
+            <el-carousel-item>
+                <img src="@/assets/tutorial/001.png" />
+            </el-carousel-item>
+            <el-carousel-item>
+                <img src="@/assets/tutorial/002.png" />
+            </el-carousel-item>
+            <el-carousel-item>
+                <img src="@/assets/tutorial/003.png" />
+            </el-carousel-item>
+            <el-carousel-item>
+                <img src="@/assets/tutorial/004.png" />
+            </el-carousel-item>
+        </el-carousel>
+    </el-dialog>
     <div class="graph-space">
         <div class="demo-control-panel">
             <div class="frame">
@@ -90,7 +109,17 @@ import {
     ZoomOut,
     CaretRight,
     CaretBottom,
+    CircleCloseFilled,
 } from '@element-plus/icons-vue'
+
+const visible = ref(false)
+
+const urls = [
+    "@/assets/tutorial/001.png",
+    "@/assets/tutorial/002.png",
+    "@/assets/tutorial/003.png",
+    "@/assets/tutorial/004.png",
+]
 
 const nodes: Nodes = reactive({})
 const edges: Edges = reactive({})
@@ -338,6 +367,10 @@ label {
     padding-top: 15px;
     padding-bottom: 15px;
     text-align: start;
+}
+
+.el-carousel__item img {
+    width: 100%;
 }
 </style>
 
